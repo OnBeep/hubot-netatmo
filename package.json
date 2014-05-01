@@ -1,0 +1,39 @@
+{
+  "name": "hubot-netatmo",
+  "description": "Hubot package for querying the netatmo Urban Weather Station.",
+  "version": "1.0.0",
+  "author": "Greg Albrecht <gba@onbeep.com>",
+  "license": "Apache License, Version 2.0",
+
+  "keywords": [
+    "hubot",
+    "hubot-scripts"
+  ],
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/OnBeep/hubot-netatmo.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/OnBeep/hubot-netatmo/issues"
+  },
+
+  "dependencies": {
+    "coffee-script": "~1.6",
+    "netatmo": "~1.0.0"
+  },
+
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "sinon-chai": "*",
+    "sinon": "*"
+  },
+
+  "main": "index.coffee",
+
+  "scripts": {
+    "test": "script/test"
+  }
+}
