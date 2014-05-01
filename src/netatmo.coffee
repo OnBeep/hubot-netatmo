@@ -65,4 +65,4 @@ module.exports = (robot) ->
 
 
     netatmo_api.getMeasure options, (err, measure) ->
-      return msg.send measure[0] if measure[0]
+      return msg.send "Temperature #{measure[0]['value'][0][0]} CO2 #{measure[0]['value'][0][1]} Humidity #{measure[0]['value'][0][2]} Pressure #{measure[0]['value'][0][3]} Noise #{measure[0]['value'][0][4]}"
