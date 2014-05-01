@@ -5,10 +5,10 @@
 #   "netatmo": "1.0.0"
 #
 # Configuration:
-#   HUBOT_NETATMO_CONSUMER_KEY
-#   HUBOT_NETATMO_CONSUMER_SECRET
-#   HUBOT_NETATMO_ACCESS_TOKEN
-#   HUBOT_NETATMO_ACCESS_TOKEN_SECRET
+#   HUBOT_NETATMO_CLIENT_ID
+#   HUBOT_NETATMO_CLIENT_SECRET
+#   HUBOT_NETATMO_USERNAME
+#   HUBOT_NETATMO_PASSWORD
 #
 # Commands:
 #   hubot netatmo <twitter username> - Show last tweet from <twitter username>
@@ -23,10 +23,10 @@ Netatmo = require('netatmo')
 
 
 config =
-  client_id: process.env.HUBOT_NETATMO_CONSUMER_KEY
-  client_secret: process.env.HUBOT_NETATMO_CONSUMER_SECRET
-  username: process.env.HUBOT_NETATMO_ACCESS_TOKEN
-  password: process.env.HUBOT_NETATMO_ACCESS_TOKEN_SECRET
+  client_id: process.env.HUBOT_NETATMO_CLIENT_ID
+  client_secret: process.env.HUBOT_NETATMO_CLIENT_SECRET
+  username: process.env.HUBOT_NETATMO_USERNAME
+  password: process.env.HUBOT_NETATMO_PASSWORD
 
 options =
   device_id: process.env.HUBOT_NETATMO_DEVICE_ID # "70:ee:50:03:98:4c"
@@ -44,17 +44,17 @@ module.exports = (robot) ->
   netatmo_api = undefined
 
   robot.respond /(weather|noise)/i, (msg) ->
-    unless config.consumer_key
-      msg.send "Please set the HUBOT_NETATMO_CONSUMER_KEY environment variable."
+    unless config.client_id
+      msg.send "Please set the HUBOT_NETATMO_CLIENT_ID environment variable."
       return
-    unless config.consumer_secret
-      msg.send "Please set the HUBOT_NETATMO_CONSUMER_SECRET environment variable."
+    unless config.client_secret
+      msg.send "Please set the HUBOT_NETATMO_CLIENT_SECRET environment variable."
       return
-    unless config.access_token
-      msg.send "Please set the HUBOT_NETATMO_ACCESS_TOKEN environment variable."
+    unless config.username
+      msg.send "Please set the HUBOT_NETATMO_USERNAME environment variable."
       return
-    unless config.access_token_secret
-      msg.send "Please set the HUBOT_NETATMO_ACCESS_TOKEN_SECRET environment variable."
+    unless config.password
+      msg.send "Please set the HUBOT_NETATMO_PASSWORD environment variable."
       return
     unless options.device_id
       msg.send "Please set the HUBOT_NETATMO_DEVICE_ID environment variable."
