@@ -1,37 +1,47 @@
-# Hubot Example
+# Hubot Netatmo
+
+Hubot package for querying the Netatmo Urban Weather Station.
 
 [![NPM](https://nodei.co/npm/hubot-netatmo.png)](https://nodei.co/npm/hubot-netatmo/)
+[![Build Status](https://travis-ci.org/OnBeep/hubot-netatmo.png)](https://travis-ci.org/OnBeep/hubot-netatmo)
 
-An example script package for Hubot
+## Prerequistes
 
-[![Build Status](https://travis-ci.org/hubot-scripts/hubot-example.png)](https://travis-ci.org/hubot-scripts/hubot-example)
+1. A Netatmo Urban Weather Station.
+2. A http://dev.netatmo.com/ oAuth configuration.
+3. A hubot!
 
-## Directory Structure
+## Configuration
 
-Using the common directory structure for hubot script packages it will be easy
-to manage and allow others to easily contribute to your package.
+* `HUBOT_NETATMO_CLIENT_ID` - http://dev.netatmo.com/ oAuth Client Id.
+* `HUBOT_NETATMO_CLIENT_SECRET` - http://dev.netatmo.com/ oAuth Client Secret.
+* `HUBOT_NETATMO_USERNAME` - http://my.netatmo.com/ Username.
+* `HUBOT_NETATMO_PASSWORD` - http://my.netatmo.com/ Password.
+* `HUBOT_NETATMO_DEVICE_ID` - Netatmo Device ID to query.
 
-### script
+## Commands
 
-This directory is home to a couple of development scripts; `bootstrap` and `test`
-they're used to bootstrap the development environment and run tests
-respectively.
+* `weather`: Shows current weather conditions.
+* `noise`: Shows current weather conditions.
 
-### src
+## TODO
 
-This directory is home to the actual hubot scripts in the package. Your
-`index.coffee` entry point will load the scripts from this directory.
+* Change `noise` to only show noise levels.
 
-### test
+## Author
 
-This directory is home to any tests you write for your scripts. This example
-package uses Mocha, Chai and Sinon to manage writing tests.
+Greg Albrecht <gba@onbeep.com>
 
-## Advantages of Building a Package
+## Copyright
 
-Some of the advantages of building an npm package for your hubot script(s) are:
+Copyrigh 2014 OnBeep, Inc.
 
-* You don't need to rely on when hubot-scripts package is released.
-* You can specify dependencies in the `package.json` rather than have users
-  manually specify them
-* You can easily add tests using your favourite frameworks and libraries
+## License
+
+Apache License, Version 2.0
+
+See LICENSE
+
+## Source
+
+https://github.com/OnBeep/hubot-netatmo

@@ -9,10 +9,11 @@
 #   HUBOT_NETATMO_CLIENT_SECRET
 #   HUBOT_NETATMO_USERNAME
 #   HUBOT_NETATMO_PASSWORD
+#   HUBOT_NETATMO_DEVICE_ID
 #
 # Commands:
-#   hubot netatmo <twitter username> - Show last tweet from <twitter username>
-#   hubot netatmo <twitter username> <n> - Cycle through tweet with <n> starting w/ latest
+#   hubot weather - Shows current weather conditions.
+#   hubot noise - Shows current weather conditions.
 #
 # Author:
 #   ampledata

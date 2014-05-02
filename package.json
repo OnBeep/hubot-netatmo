@@ -1,6 +1,6 @@
 {
   "name": "hubot-netatmo",
-  "description": "Hubot package for querying the netatmo Urban Weather Station.",
+  "description": "Hubot package for querying the Netatmo Urban Weather Station.",
   "version": "1.0.0",
   "author": "Greg Albrecht <gba@onbeep.com>",
   "license": "Apache License, Version 2.0",
