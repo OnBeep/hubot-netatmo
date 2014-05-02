@@ -1,5 +1,5 @@
 # Description:
-#   gets tweet from user
+#   Gets weather conditions from Netatmo Urban Weather Station.
 #
 # Dependencies:
 #   "netatmo": "1.0.0"
